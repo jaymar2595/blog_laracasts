@@ -20,9 +20,13 @@
     <textarea class="form-control" name="body" rows="8" cols="80" id="body" placeholder="Place your text here"></textarea>
   </div>
 
-
+<div class="form-group">
   <button type="submit" class="btn btn-primary">Publish</button>
+    </div>
 </form>
+
+  @include('layouts.errors')
+
 
 </div>
 @endsection

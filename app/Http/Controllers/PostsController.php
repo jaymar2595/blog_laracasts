@@ -18,6 +18,12 @@ class PostsController extends Controller
        return view('posts.create');
     }
     public function store(){
+      //validate the request database
+      $this->validate(request(), [
+        'title' => 'required',
+        'body' => 'required'
+      ]);
+
       //create a post
       Post::create(request(['title', 'body']));
 
